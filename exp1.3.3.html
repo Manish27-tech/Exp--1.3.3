@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Class Hierarchy UI</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #f4f6f9;
+        padding: 40px;
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+        color: #2c3e50;
+    }
+
+    p.subtitle {
+        margin-bottom: 30px;
+        color: #555;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .card {
+        width: 280px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        padding: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+    }
+
+    .role {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .details {
+        font-size: 14px;
+        margin-bottom: 15px;
+        color: #555;
+    }
+
+    .badge {
+        display: inline-block;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .person {
+        background-color: #d1ecf1;
+        color: #0c5460;
+    }
+
+    .student {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .teacher {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+
+</style>
+</head>
+
+<body>
+
+<h1>Class Hierarchy Demonstration</h1>
+<p class="subtitle">Person → Student & Teacher (Inheritance & Polymorphism)</p>
+
+<div class="container">
+
+    <!-- Person -->
+    <div class="card">
+        <div class="role">Person</div>
+        <div class="details">
+            Name: Ramesh<br>
+            Age: 30
+        </div>
+        <span class="badge person">Base Class</span>
+    </div>
+
+    <!-- Student -->
+    <div class="card">
+        <div class="role">Student</div>
+        <div class="details">
+            Name: Rahul<br>
+            Age: 20<br>
+            Course: Computer Science
+        </div>
+        <span class="badge student">Inherited from Person</span>
+    </div>
+
+    <!-- Teacher -->
+    <div class="card">
+        <div class="role">Teacher</div>
+        <div class="details">
+            Name: Mrs. Sharma<br>
+            Age: 40<br>
+            Subject: Mathematics
+        </div>
+        <span class="badge teacher">Inherited from Person</span>
+    </div>
+
+    <!-- Another Student -->
+    <div class="card">
+        <div class="role">Student</div>
+        <div class="details">
+            Name: Anjali<br>
+            Age: 22<br>
+            Course: Data Science
+        </div>
+        <span class="badge student">Polymorphism Example</span>
+    </div>
+
+    <!-- Another Teacher -->
+    <div class="card">
+        <div class="role">Teacher</div>
+        <div class="details">
+            Name: Mr. Verma<br>
+            Age: 35<br>
+            Subject: Physics
+        </div>
+        <span class="badge teacher">Polymorphism Example</span>
+    </div>
+
+</div>
+
+</body>
+</html>
